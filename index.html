@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>eBookShelf</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-left">
+        <h1>eBookShelf</h1>
+        <p>A simple CRUD tool to make managing your books easier</p>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <form id="create-book" class="form-container">
+        <div class="form-left">
+          <input
+            class="left-input"
+            id="newTitle"
+            type="text"
+            minlength="1"
+            maxlength="60"
+            placeholder="Title..."
+            required
+          />
+          <input
+            class="left-input"
+            id="newAuthor"
+            type="text"
+            minlength="1"
+            maxlength="35"
+            placeholder="Author..."
+            required
+          />
+          <input
+            class="left-input"
+            id="newPages"
+            type="number"
+            min="1"
+            max="16000"
+            placeholder="Pages..."
+            required
+          />
+        </div>
+        <div class="form-right">
+          <div class="form-right-top">
+            <label for="userHasRead">Have you read it?</label>
+            <input id="userHasRead" type="checkbox" />
+          </div>
+          <div class="form-right-bottom">
+            <button id="create" type="submit">Create</button>
+          </div>
+        </div>
+      </form>
+
+      <table class="books-container">
+        <tbody>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th></th>
+          </tr>
+        </tbody>
+        <tbody id="books" class="books"></tbody>
+      </table>
+    </main>
+    <footer>
+      <h4>
+        Credit to <a href="https://icons8.com/">Icons8</a> for favicon image
+      </h4>
+    </footer>
+  </body>
+</html>
